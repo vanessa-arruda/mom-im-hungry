@@ -2,12 +2,14 @@ from pydantic import BaseModel, UUID4, Field
 from typing import Optional, List
 from datetime import datetime
 from enum import Enum
+from models.models_recipe import Recipe
+from models.models_user import Favorite, RecipeView, UserTags
+from models.models_common import Tag
 
 
 class DifficultyLevel(str, Enum):
     easy = "easy"
     standard = "standard"
-    advanced = "advanced"
 
 
 # User Schemas
@@ -23,6 +25,16 @@ class UserCreate(UserBase):
 class User(UserBase):
     id: UUID4
     created_at: datetime
+    updated_at: datetime
+    is_admin: bool = False
+    is_active: bool = True
+    country_code: Optional[str] = None
+    country: Optional[str] = None
+    recipes: List["Recipe"] = []
+    tags: List[Tag] = []
+    favorites: List[Favorite] = []
+    recipe_views: List[RecipeView] = []
+    user_tags: List[UserTags] = []
 
     class Config:
         orm_mode = True

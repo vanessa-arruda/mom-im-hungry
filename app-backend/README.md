@@ -11,7 +11,7 @@ The app aims to make cooking easier by offering features like ingredient convers
 - **Recipe Filtering**:
     - Filter recipes by:
         - Country (e.g., BRA, SWE, US, UK, ITA)
-        - Ingredient types (e.g., fruits, vegetables, protein, grains, dairy, spices)
+        - Ingredient types (e.g., fruits, vegetables, protein, grains, dairy, spices, fat)
         - Seasons (spring, summer, autumn, winter)
         - Meal type (e.g., snacks, desserts, salads, soups & broths, sauces, main courses, drinks)
         - Calories (Kcal)
